@@ -32,4 +32,5 @@ public class ComparisonRunnable implements Runnable {
         threadMessage.setData(bundle);
         return threadMessage;
     }
+
 }
