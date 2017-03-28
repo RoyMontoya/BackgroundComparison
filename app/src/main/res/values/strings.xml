@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Comparison</string>
+    <string name="button_start">Start Background</string>
+    <string name="async_header">Async</string>
+    <string name="thread_header">Thread</string>
+    <string name="handler_header">Handler</string>
+    <string name="zero">0</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header_async"
+            style="@style/counter_header_text_style"
+            android:text="@string/async_header" />
+
+        <TextView
+            android:id="@+id/counter_async"
+            style="@style/counter_text_style"
+            android:layout_below="@id/header_async" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/header_thread"
+            style="@style/counter_header_text_style"
+            android:text="@string/thread_header" />
+
+        <TextView
+            android:id="@+id/counter_thread"
+            style="@style/counter_text_style"
+            android:layout_below="@id/header_thread" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/header_handler"
+            style="@style/counter_header_text_style"
+            android:text="@string/handler_header" />
+
+        <TextView
+            android:id="@+id/counter_handler"
+            style="@style/counter_text_style"
+            android:layout_below="@id/header_handler" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
