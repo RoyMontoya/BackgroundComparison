@@ -25,5 +25,4 @@
         <item name="android:textSize">@dimen/counter_text_size</item>
     </style>
 
-
 </resources>
