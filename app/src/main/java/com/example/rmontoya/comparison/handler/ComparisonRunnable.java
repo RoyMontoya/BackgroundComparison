@@ -1,13 +1,16 @@
 package com.example.rmontoya.comparison.handler;
 
-import com.example.rmontoya.comparison.listener.HandlerResultListener;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 
 public class ComparisonRunnable implements Runnable {
 
-    HandlerResultListener listener;
+    public static final String RUNNABLE_RESULT = "runnable";
+    private Handler uiHandler;
 
-    public ComparisonRunnable(HandlerResultListener handlerResultListener) {
-        this.listener = handlerResultListener;
+    public ComparisonRunnable(Handler handler) {
+        this.uiHandler = handler;
     }
 
     @Override
@@ -15,10 +18,18 @@ public class ComparisonRunnable implements Runnable {
         try {
             for (int counter = 1; counter <= 10; counter++) {
                 Thread.sleep(1000);
-                listener.onHandlerResultListener(counter);
+                uiHandler.sendMessage(buildRunnableMessage(counter));
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    private Message buildRunnableMessage(int counter) {
+        Message threadMessage = new Message();
+        Bundle bundle = new Bundle();
+        bundle.putInt(RUNNABLE_RESULT, counter);
+        threadMessage.setData(bundle);
+        return threadMessage;
     }
 }
